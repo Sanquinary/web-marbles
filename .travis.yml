@@ -27,6 +27,8 @@ env:
 before_install:
 - cp src/server/config.user.example.js src/server/config.user.js
 - cp src/client/config.user.example.js src/client/config.user.js
+- chmod ugo+x travis/disable-firefox-updates.sh
+- travis/disable-firefox-updates.sh
 - chmod ugo+x travis/get-webdrivers.sh
 - travis/get-webdrivers.sh
 - PATH=$PATH:$TRAVIS_BUILD_DIR
